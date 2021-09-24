@@ -27,6 +27,7 @@ services:
        - credia-network
     volumes:
       - ./:/var/www
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
 
   credia-db:
     image: mysql:8.0.20
