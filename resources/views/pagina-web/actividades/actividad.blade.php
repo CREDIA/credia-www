@@ -7,7 +7,7 @@
 ?>
 
 @section('banner')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{ $foto }})">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/storage/uploads/{{ $foto }})">
 	<div class="xs-black-overlay"></div>
 	<div class="container">
 		<div class="color-white xs-inner-banner-content">
@@ -120,10 +120,10 @@
 					@foreach($actividades as $actividad)
 						<div class="col-lg-6 col-md-6" style="padding: 0px 0px 25px 10px;">
 							<div class="plan-inner text-right">
-								<div class="entry-banner" style="background-image: url({{ $actividad->foto }});"></div>
+								<div class="entry-banner" style="background-image: url(/storage/uploads/{{ $actividad->foto }});"></div>
 								<div class="entry-title-act">
 									@if(empty($actividad->icono) === FALSE)
-										<div class="price" style="background-image: url({{ $actividad->icono }});"></div>
+										<div class="price" style="background-image: url(/storage/uploads/{{ $actividad->icono }});"></div>
 									@else
 										<div class="price" style="background-image: url('assets/images/actividades/actividad_general.png');"></div>
 									@endif

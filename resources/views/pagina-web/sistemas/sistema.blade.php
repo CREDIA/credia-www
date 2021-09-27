@@ -3,7 +3,7 @@
 @section('title', '| Sistemas')
 
 @section('banner')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}})">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/storage/uploads/{{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
@@ -44,7 +44,7 @@
 						</div>
 						<div class="col-lg-5">
 							<div class="xs-feature-image-box image-1">
-								<img src="{{ $sistema->foto }}" alt="">
+								<img src="/storage/uploads/{{ $sistema->foto }}" alt="">
 							</div>
 						</div>
 					</div><!-- .row END -->

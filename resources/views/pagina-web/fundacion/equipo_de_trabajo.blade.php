@@ -7,7 +7,7 @@
 @section('title', '| Equipo de Trabajo')
 
 @section('banner')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/storage/uploads/{{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
@@ -37,7 +37,7 @@
 					@foreach($empleados as $empleado)
 						<div class="col-md-6 col-lg-3">
 							<div class="xs-single-team">
-								<img src="{{ $empleado->foto }}" alt="">
+								<img src="/storage/uploads/{{ $empleado->foto }}" alt="">
 								<div class="xs-team-content">
 									<h4>{{ $empleado->nombre }}</h4>
 									<small>{{ $empleado->cargo }}</small>

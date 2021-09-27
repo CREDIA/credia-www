@@ -17,7 +17,7 @@
 ?>
 
 @section('banner')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}})">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/storage/uploads/{{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
@@ -60,7 +60,7 @@
 					@foreach($proyectos as $proyecto)
 						<div class="xs-popular-item xs-box-shadow mySlidesv">
 							<div class="xs-item-box col-lg-5 col-md-12">
-								<div class="xs-item-header-box" style="background-image: url(/{{ $proyecto->foto }});"></div>
+								<div class="xs-item-header-box" style="background-image: url(/storage/uploads/{{ $proyecto->foto }});"></div>
 							</div>
 							<div class="xs-item-content-box col-lg-7 col-md-12">
 								<div class="xs-margin-2">
@@ -105,7 +105,7 @@
 				@foreach($ejecuciones as $proyecto)
 					<div class="col-lg-4 col-md-6">
 						<div class="xs-popular-item xs-box-shadow">
-							<div class="xs-item-header" style="background-image: url(/{{ $proyecto->foto }});"></div>
+							<div class="xs-item-header" style="background-image: url(/storage/uploads/{{ $proyecto->foto }});"></div>
 								@if($proyecto->avance < 100)
 									<div class="xs-skill-bar">
 										<div class="xs-skill-track bg-light-green">

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
+use Illuminate\Support\Facades\Storage;
 
 class BlogComment extends Model
 {
@@ -39,7 +40,7 @@ class BlogComment extends Model
         self::deleting(function($obj) {
             if (count((array)$obj->fotos)) {
                 foreach ($obj->fotos as $file_path) {
-					\Storage::disk('public_folder')->delete($obj->image);
+					Storage::disk('public_folder')->delete($obj->image);
                 }
             }
         });

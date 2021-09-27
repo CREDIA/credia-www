@@ -3,7 +3,7 @@
 @section('title', '| Album de fotos')
 
 @section('banner')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}});padding-top: 210px;padding-bottom: 120px;">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/storage/uploads/{{$foto}});padding-top: 210px;padding-bottom: 120px;">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
@@ -28,8 +28,8 @@
 				<div class="xs-portfolio-grid">
 					@foreach($fotos as $foto)						
 						<div class="xs-portfolio-grid-item">
-							<a href="/{{ $foto->fotos }}" class="xs-single-portfolio-item xs-image-popup" title='{{ $foto->descripcion }}'>
-								<img src="/{{ $foto->fotos }}">
+							<a href="/storage/uploads/{{ $foto->fotos }}" class="xs-single-portfolio-item xs-image-popup" title='{{ $foto->descripcion }}'>
+								<img src="/storage/uploads/{{ $foto->fotos }}">
 								<div class="xs-portfolio-content">
 									<span class="icon-plus-button"></span>
 								</div>
