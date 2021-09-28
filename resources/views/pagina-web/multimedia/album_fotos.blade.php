@@ -3,7 +3,7 @@
 @section('title', '| Album de fotos')
 
 @section('banner')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}});padding-top: 210px;padding-bottom: 120px;">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/storage/uploads/{{$foto}});padding-top: 210px;padding-bottom: 120px;">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">

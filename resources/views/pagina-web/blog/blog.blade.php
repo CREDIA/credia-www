@@ -51,7 +51,7 @@
 				@foreach($articulos as $articulo)
 					<div class="col-lg-4 col-md-6">
 						<div class="xs-box-shadow xs-single-journal xs-mb-30">
-							<div class="entry-thumbnail" style="background-image: url(/{{ $articulo->foto }});">
+							<div class="entry-thumbnail" style="background-image: url(/storage/uploads/{{ $articulo->foto }});">
 								<div class="post-author">
 									<span class="xs-round-avatar">
 										<img class="img-responsive" src="{{ 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($articulo->correo))).'?s=50&d=monsterid' }}">

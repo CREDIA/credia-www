@@ -35,7 +35,7 @@
 				<div class="col-md-12 col-lg-8 estilo">
 					<!-- format standard -->
 					<article class="post format-standard hentry xs-blog-post-details">
-						<div class="post-media post-image" style="background-image: url(/{{ $articulo->first()->foto }});"></div>
+						<div class="post-media post-image" style="background-image: url(/storage/uploads/{{ $articulo->first()->foto }});"></div>
 						<div class="post-body xs-border xs-padding-40">
 							<div class="entry-header">
 								<div class="post-meta row">
@@ -201,6 +201,10 @@
 						
 								<textarea placeholder="Ingrese su comentario *" name="comentario" value="{{ old('comentario') }}" cols="45" rows="8" required></textarea>
 								
+								<span class="captcha-image">{!! Captcha::img() !!}</span> &nbsp;&nbsp
+								<br>
+								<input placeholder="Captcha" id="captcha" name="captcha" value="" type="text" required>
+							
 								<div class="text-right">
 									<button type="submit" class="btn btn-primary">Publicar comentario</button>
 								</div>

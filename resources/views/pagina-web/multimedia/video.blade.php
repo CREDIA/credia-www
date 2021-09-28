@@ -3,7 +3,7 @@
 @section('title', '| Videos')
 
 @section('banner')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}});padding-top: 210px;padding-bottom: 120px;">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/storage/uploads/{{$foto}});padding-top: 210px;padding-bottom: 120px;">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
@@ -29,7 +29,7 @@
 					@foreach($videos as $video)
 						<div class="col-lg-3 col-md-3">
 							<div class="xs-video-popup-wraper">
-								<div class="xs-vide-image" style="background-image:url(/{{ $video->cover }})"></div>
+								<div class="xs-vide-image" style="background-image:url(/storage/uploads/{{ $video->cover }})"></div>
 								<div class="content-video">
 									<h3>{{ $video->descripcion }}</h3>
 								</div>

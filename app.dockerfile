@@ -8,7 +8,9 @@ WORKDIR /var/www
 # Instalar dependencias
 RUN apt-get update && apt-get install -y \
     build-essential \
-    libpng-dev \
+    libpng-dev  \
+    libjpeg-dev \ 
+    libfreetype6-dev \
     libjpeg62-turbo-dev \
     libfreetype6-dev \
     locales \
@@ -35,6 +37,12 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN  apt-get update && apt install -y unzip zlib1g-dev libicu-dev libsqlite3-dev sqlite3 libpng-dev  libzip-dev wget
 RUN  docker-php-ext-install pdo_sqlite pdo_mysql zip pcntl intl gd
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+    --with-gd \
+    --with-jpeg-dir \
+    --with-png-dir \
+    --with-zlib-dir
+RUN docker-php-ext-install -j$(nproc) gd
 RUN pecl install -o -f redis \
 &&  rm -rf /tmp/pear \
 &&  docker-php-ext-enable redis

@@ -83,7 +83,7 @@
 										<h3 class="widget-title">Fotografías</h3>
 										<div class="slide-foto-actividad">
 												@foreach($fotos as $foto)
-														<div class="mySlides" style="background-image: url(/{{ $foto->fotos }})"></div>
+														<div class="mySlides" style="background-image: url(/storage/uploads/{{ $foto->fotos }})"></div>
 												@endforeach
 											<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
 											<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
@@ -99,7 +99,7 @@
 												@foreach($videos as $video)
 													<div class="mySlidesv">
 														<div class="xs-video-popup-wraper-c">
-															<div class="xs-vide-image-c" style="background-image:url(/{{ $video->cover }})"></div>
+															<div class="xs-vide-image-c" style="background-image:url(/storage/uploads/{{ $video->cover }})"></div>
 															<div class="xs-video-popup-content-c">
 																<a href="{{ $video->url_video }}" class="xs-video-popup xs-round-btn">
 																	<i class="fa fa-play"></i>

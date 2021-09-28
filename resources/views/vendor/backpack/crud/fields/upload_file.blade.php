@@ -7,9 +7,9 @@
     @if (!empty($field['value']))
     <div class="well well-sm">
         @if (isset($field['disk']))
-            <a target="_blank" href="{{ (asset(\Storage::disk($field['disk'])->url(array_get($field, 'prefix', '').$field['value']))) }}"><img src="{{ isset($field['disk'])?asset(\Storage::disk($field['disk'])->url($file_path)):asset($file_path) }}" class="dimension" height="200px" ></a>
+            <a target="_blank" href="{{(asset(\Storage::disk($field['disk'])->url(array_get($field, 'prefix', '').'/storage/uploads/'.$field['value']))) }}"><img src="{{ isset($field['disk'])?asset(\Storage::disk($field['disk'])->url($file_path)):asset($file_path) }}" class="dimension" height="200px" ></a>
         @else
-            <a target="_blank" href="{{ (asset(array_get($field, 'prefix', '').$field['value'])) }}"><img src="{{ (asset(array_get($field, 'prefix', '').$field['value'])) }}" class="dimension" height="200px" ></a>
+            <a target="_blank" href="{{ (asset(array_get($field, 'prefix', '').'/storage/uploads/'.$field['value'])) }}"><img src="{{ (asset(array_get($field, 'prefix', '').'/storage/uploads/'.$field['value'])) }}" class="dimension" height="200px" ></a>
         @endif
         </a>
     	<a id="{{ $field['name'] }}_file_clear_button" href="#" class="btn btn-default btn-xs pull-right" title="Clear file"><i class="fa fa-remove"></i></a>

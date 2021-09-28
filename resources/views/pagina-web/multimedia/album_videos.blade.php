@@ -3,7 +3,7 @@
 @section('title', '| Album de fotos')
 
 @section('banner')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}});padding-top: 210px;padding-bottom: 120px;">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/storage/uploads/{{$foto}});padding-top: 210px;padding-bottom: 120px;">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
@@ -34,7 +34,7 @@
 					<div class="col-lg-3 col-md-4 col-xs-6">
 						<div class="zoom-in">
 							<a href="{{URL::route('video',['id' => $album->id])}}" class="d-block">
-								<div class="img-fluid img-thumbnail" style="background-image:url(/{{$album->cover}})"></div>
+								<div class="img-fluid img-thumbnail" style="background-image:url(/storage/uploads/{{$album->cover}})"></div>
 							</a>
 							<div class="titulo-album text-center">
 								<p>{{$album->nombre}}</p>
