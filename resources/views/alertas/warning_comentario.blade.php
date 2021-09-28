@@ -1,4 +1,4 @@
-@if (count($errors) > 0)
+@if ($errors->any())
     <div class="alert alert-warning alert-dismissable">
     	<p>¡Atento! Hay algunos cambios antes de volver a enviar el comentario.</p>
 		<a><i class="fa fa-exclamation-triangle"></i></a> 

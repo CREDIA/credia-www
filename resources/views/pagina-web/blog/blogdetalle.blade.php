@@ -201,8 +201,10 @@
 						
 								<textarea placeholder="Ingrese su comentario *" name="comentario" value="{{ old('comentario') }}" cols="45" rows="8" required></textarea>
 								
-								{!! captcha_img() !!}
-								<input placeholder="Captcha" name="captcha" value="" type="text" required>
+								<span class="captcha-image">{!! Captcha::img() !!}</span> &nbsp;&nbsp
+								<br>
+								<input placeholder="Captcha" id="captcha" name="captcha" value="" type="text" required>
+							
 								<div class="text-right">
 									<button type="submit" class="btn btn-primary">Publicar comentario</button>
 								</div>

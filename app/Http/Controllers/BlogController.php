@@ -89,16 +89,13 @@ class BlogController extends Controller
 	public function store(BlogCommentRequest $request, $slug, $id)
 	{
 		$comentario = new BlogComment;
-
 		$comentario->blog_post_id = $id;
 		$comentario->nombre = $request->nombre;
 		$comentario->correo = $request->correo;
 		$comentario->estado = 0;
 		$comentario->comentario = $request->comentario;
 		$comentario->parent = 0;
-
 		$comentario->save();
-
 		return redirect()->route('blogdetalle', ['slug' => $slug, 'id' => $id]);
 	}
 }

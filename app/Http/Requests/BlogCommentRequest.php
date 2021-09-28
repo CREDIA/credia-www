@@ -23,12 +23,21 @@ class BlogCommentRequest extends FormRequest
      */
     public function rules()
     {
-
         return [
-            'nombre.required' => 'Es necesario agregar un nombre.',
-            'correo.required' => 'Es necesario agregar un correo.',
-            'comentario.required' => 'Es necesario agregar un comentario',
-            'captcha' => 'required|captcha_api:' . request('key') . ',math'
+            'nombre' => 'required',
+            'correo' => 'required|email',
+            'comentario' => 'required|min:5',
+            'captcha' => 'captcha|required'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'nombre.required' => 'Es necesario agregar su nombre.',
+            'descripcion.required' => 'Es necesario agregar un comentario.',
+            'captcha' => 'El captcha es invalido',
+            'captcha.required' => 'El captcha es necesario'
         ];
     }
 }
