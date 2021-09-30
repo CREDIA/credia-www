@@ -22,8 +22,7 @@ services:
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
-    ssl_certificate: /etc/letsencrypt/live/example.org/fullchain.pem;
-    ssl_certificate_key: /etc/letsencrypt/live/example.org/privkey.pem;
+
   credia-app:
     container_name: credia-app
     restart: unless-stopped
