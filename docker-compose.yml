@@ -17,7 +17,7 @@ services:
     networks:
        - credia-network
   certbot:
-    image: certbot/certbot
+    image: certbot/certbot:latest
     command: certonly --webroot --webroot-path=/var/www/certbot --email info@credia.hn --agree-tos --no-eff-email -d credia.hn -d www.credia.com
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
     volumes:
