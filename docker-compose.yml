@@ -4,7 +4,6 @@ services:
     image: nginx:alpine
     container_name: credia-nginx
     restart: unless-stopped
-    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
     tty: true
     ports:
         - "80:80"
@@ -12,18 +11,8 @@ services:
     volumes:
         - ./:/var/www
         - ./nginx/conf.d/prod/:/etc/nginx/conf.d/
-        - ./certbot/conf:/etc/letsencrypt
-        - ./certbot/www:/var/www/certbot
     networks:
        - credia-network
-  certbot:
-    image: certbot/certbot:latest
-    command: certonly --webroot --webroot-path=/var/www/certbot --email info@credia.hn --agree-tos --no-eff-email -d credia.hn -d www.credia.com
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
-    volumes:
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-
   credia-app:
     container_name: credia-app
     restart: unless-stopped
