@@ -7,10 +7,9 @@ services:
     tty: true
     ports:
         - "80:80"
-        - "443:443"
     volumes:
         - ./:/var/www
-        - ./nginx/conf.d/prod/:/etc/nginx/conf.d/
+        - ./nginx/conf.d/dev/:/etc/nginx/conf.d/
     networks:
        - credia-network
   credia-app:
