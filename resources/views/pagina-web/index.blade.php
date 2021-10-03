@@ -35,7 +35,7 @@
 	<section class="xs-welcome-slider">
 		<div class="xs-banner-slider owl-carousel">
 			@foreach($sliders as $slide)
-				<div class="xs-welcome-content" style="background-image: url({{ $slide->foto }});">
+				<div class="xs-welcome-content" style="background-image: url(/storage/uploads/{{ $slide->foto }});">
 					<div class="container">
 						<div class="xs-welcome-wraper color-white">
 							<h2>{{ $slide->titulo }}</h2>
