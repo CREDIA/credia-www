@@ -175,7 +175,7 @@
 					@foreach($proyectos as $proyecto)
 						<div class="col-lg-4 col-md-6">
 							<div class="xs-popular-item xs-box-shadow">
-								<div class="xs-item-header" style="background-image: url(/{{ $proyecto->foto }});"></div>
+								<div class="xs-item-header" style="background-image: url(/storage/uploads/{{ $proyecto->foto }});"></div>
 								<div class="xs-skill-bar">
 									<div class="xs-skill-track bg-light-green">
 										<p><span class="number-percentage-count number-percentage" data-value="{{ $proyecto->avance }}" data-animation-duration="3500">0</span>%</p>
