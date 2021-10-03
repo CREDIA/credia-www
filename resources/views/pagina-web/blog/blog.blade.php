@@ -27,7 +27,7 @@
 ?>
 
 @section('banner')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}})">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/storage/uploads/{{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
