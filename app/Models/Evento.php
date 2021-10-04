@@ -83,7 +83,7 @@ class Evento extends Model
 	{
 		$attribute_name = "foto";
 		$disk = "public";
-		$destination_path = "images/fotos-eventos";
+		$destination_path = "uploads/images/fotos-eventos";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 }

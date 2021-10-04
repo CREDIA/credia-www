@@ -96,7 +96,7 @@ class Foto extends Model
 	{
 		$attribute_name = "fotos";
 		$disk = "public";
-		$destination_path = "multimedia/fotos";
+		$destination_path = "uploads/multimedia/fotos";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 }

@@ -25,7 +25,7 @@ class FotoVoluntario extends Model
 	protected $revisionFormattedFieldNames = array(
 		'cargo' => 'cargo',
 		'nombre' => 'nombre',
-		'foto' => 'fotografía',
+		'foto' => 'fotografï¿½a',
 	);
 
     /*------------------------------------------------------------------------
@@ -62,7 +62,7 @@ class FotoVoluntario extends Model
 	{
 		$attribute_name = "foto";
 		$disk = "public";
-		$destination_path = "images/fotos-voluntarios";
+		$destination_path = "uploads/images/fotos-voluntarios";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 }

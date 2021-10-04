@@ -101,7 +101,7 @@ class Actividad extends Model
 	{
 		$attribute_name = "foto";
 		$disk = "public";
-		$destination_path = "images/fotos-actividades";
+		$destination_path = "/uploads/images/fotos-actividades";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 	
@@ -109,7 +109,7 @@ class Actividad extends Model
     {
         $attribute_name = "galeria";
         $disk = "public";
-        $destination_path = "images/fotos-actividades/gallery";
+        $destination_path = "/uploads/images/fotos-actividades/gallery";
         $this->uploadMultipleFilesToDisk($value, $attribute_name, $disk, $destination_path);
     }
 	
@@ -117,7 +117,7 @@ class Actividad extends Model
 	{
 		$attribute_name = "icono";
 		$disk = "public";
-		$destination_path = "images/fotos-actividades/icono";
+		$destination_path = "uploads/images/fotos-actividades/icono";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 }

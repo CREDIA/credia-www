@@ -94,7 +94,7 @@ class Proyecto extends Model
 	{
 		$attribute_name = "foto";
 		$disk = "public";
-		$destination_path = "images/fotos-proyectos";
+		$destination_path = "uploads/images/fotos-proyectos";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 }

@@ -106,7 +106,7 @@ class Blog extends Model
     {
         $attribute_name = "fotos";
         $disk = "public";
-        $destination_path = "images/blog-articles-photos/gallery";
+        $destination_path = "uploads/images/blog-articles-photos/gallery";
         $this->uploadMultipleFilesToDisk($value, $attribute_name, $disk, $destination_path);
     }
 }

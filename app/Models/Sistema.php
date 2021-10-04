@@ -81,7 +81,7 @@ class Sistema extends Model
     {
         $attribute_name = "fotos";
         $disk = "public";
-        $destination_path = "images/fotos-sistemas/gallery";
+        $destination_path = "uploads/images/fotos-sistemas/gallery";
         $this->uploadMultipleFilesToDisk($value, $attribute_name, $disk, $destination_path);
     }
 }

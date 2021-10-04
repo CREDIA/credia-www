@@ -97,7 +97,7 @@ class Video extends Model
 	{
 		$attribute_name = "cover";
 		$disk = "public";
-		$destination_path = "images/videos/cover";
+		$destination_path = "uploads/images/videos/cover";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 }

@@ -71,7 +71,7 @@ class Banner extends Model
 	{
 		$attribute_name = "foto";
 		$disk = "public";
-		$destination_path = "images/fotos-banners";
+		$destination_path = "uploads/images/fotos-banners";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 }

@@ -97,7 +97,7 @@ class Descarga extends Model
     {
         $attribute_name = "archivos";
         $disk = "public";
-        $destination_path = "multimedia/descargas";
+        $destination_path = "uploads/multimedia/descargas";
         $this->uploadMultipleFilesToDisk($value, $attribute_name, $disk, $destination_path);
     }
 }
