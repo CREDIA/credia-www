@@ -33,7 +33,7 @@
 					<div class="col-lg-3 col-md-4 col-xs-6">
 						<div class="zoom-in">
 							<a href="{{URL::route('foto',['id' => $album->id])}}" class="d-block">
-								<div class="img-fluid img-thumbnail" style="background-image:url(/{{$album->cover}})"></div>
+								<div class="img-fluid img-thumbnail" style="background-image:url(/storage/uploads/{{$album->cover}})"></div>
 							</a>
 							<div class="titulo-album text-center">
 								<p>{{$album->nombre}}</p>
