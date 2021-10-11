@@ -70,7 +70,7 @@ class Patrocinador extends Model
 	{
 		$attribute_name = "foto";
 		$disk = "public";
-		$destination_path = "uploads/images/fotos-patrocinadores";
+		$destination_path = "images/fotos-patrocinadores";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 }

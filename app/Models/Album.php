@@ -77,7 +77,7 @@ class Album extends Model
 	{
 		$attribute_name = "cover";
 		$disk = "public";
-		$destination_path = "uploads/multimedia/portada-album";
+		$destination_path = "multimedia/portada-album";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 }

@@ -117,7 +117,7 @@ class Actividad extends Model
 	{
 		$attribute_name = "icono";
 		$disk = "public";
-		$destination_path = "uploads/images/fotos-actividades/icono";
+		$destination_path = "images/fotos-actividades/icono";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 }
