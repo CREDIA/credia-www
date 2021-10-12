@@ -163,10 +163,10 @@
 					@foreach($actividades as $actividad)
 						<div class="plan col-lg-4 col-md-6">
 							<div class="plan-inner text-right">
-								<div class="entry-banner" style="background-image: url({{ $actividad->foto }});"></div>
+								<div class="entry-banner" style="background-image: url(/storage/uploads/{{ $actividad->foto }});"></div>
 								<div class="entry-title-act">
 									@if(empty($actividad->icono) === FALSE)
-										<div class="price" style="background-image: url({{ $actividad->icono }});"></div>
+										<div class="price" style="background-image: url(/storage/uploads/{{ $actividad->icono }});"></div>
 									@else
 										<div class="price" style="background-image: url('assets/images/actividades/actividad_general.png');"></div>
 									@endif
