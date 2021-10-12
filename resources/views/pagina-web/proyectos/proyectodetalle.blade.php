@@ -44,7 +44,7 @@
 									<h3 class="widget-title">Patrocinadores</h3>
 									<ul class="xs-event-sponsor clearfix">
 										@foreach($proyecto->first()->patrocinadores()->get() as $proyect)
-											<li><a><img src="/{{ $proyect->foto }}" alt=""></a></li>
+											<li><a><img src="/storage/uploads/{{ $proyect->foto }}" alt=""></a></li>
 										@endforeach
 									</ul>
 								</div><!-- .xs-event-schedule-widget END -->
