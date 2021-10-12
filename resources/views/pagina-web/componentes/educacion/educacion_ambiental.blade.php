@@ -326,7 +326,7 @@
 					<div class="slide-foto">
 						@if(count($fotos) > 0)
 							@foreach($fotos as $foto)
-								<div class="mySlides" style="background-image: url({{$foto->fotos}})"></div>
+								<div class="mySlides" style="background-image: url(/storage/uploads/{{$foto->fotos}})"></div>
 							@endforeach
 						@else
 							<div class="mySlides" style="background-image: url('/assets/images/componentes/no_foto.jpg')"></div>
@@ -344,7 +344,7 @@
 							@foreach($videos as $video)
 								<div class="mySlidesv">
 									<div class="xs-video-popup-wraper-c">
-										<div class="xs-vide-image-c" style="background-image:url(/{{ $video->cover }})"></div>
+										<div class="xs-vide-image-c" style="background-image:url(/storage/uploads/{{ $video->cover }})"></div>
 										<div class="xs-video-popup-content-c">
 											<a href="{{ $video->url_video }}" class="xs-video-popup xs-round-btn">
 												<i class="fa fa-play"></i>
