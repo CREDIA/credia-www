@@ -72,7 +72,7 @@
 				@foreach($voluntarios as $voluntario)
 					<div class="col-md-6 col-lg-3">
 						<div class="xs-single-team xs-mb-50">
-							<img src="{{ $voluntario->foto }}" alt="">
+							<img src="/storage/uploads/{{ $voluntario->foto }}" alt="">
 							<div class="xs-team-content">
 								<h4>{{ $voluntario->nombre }}</h4>
 								<small>{{ $voluntario->cargo }}</small>
