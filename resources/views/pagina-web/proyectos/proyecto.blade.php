@@ -53,7 +53,8 @@
 	@endpush
 	
 	<!-- Proyectos en ejecucion section -->
-	<section class="waypoint-tigger xs-section-padding bg-gray">
+	@if (sizeof($proyectos) >0 )
+			<section class="waypoint-tigger xs-section-padding bg-gray">
 		<div class="container">
 			<div class="row">
 				<div class="proyect-slide">
@@ -97,6 +98,8 @@
 			</div>
 		</div><!-- .container end -->
 	</section><!-- End Proyectos en ejecucion section -->
+	@endif
+
 	
 	<!-- Proyectos Finalizados section -->
 	<section class="waypoint-tigger xs-section-padding">
