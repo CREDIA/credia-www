@@ -102,12 +102,16 @@ class BannerCrudController extends CrudController
 			'type' => 'custom_html',
 			'value' => '<hr name="separato2">'
 		]);
-		
-		$this->crud->addField([
-			'name' => 'foto',
+		$this->crud->addField([ // image
 			'label' => "Fotografía",
-			'type' => 'upload',
+			'name' => "foto",
+			'type' => 'image',
 			'upload' => true,
+			'crop' => true, 
+			'aspect_ratio' => '3.33', // omit or set to 0 to allow any aspect ratio
+			'disk' => 'public',
+			'prefix' => 'uploads/' 
+			
 		]);
 		
 		$this->crud->addField([
