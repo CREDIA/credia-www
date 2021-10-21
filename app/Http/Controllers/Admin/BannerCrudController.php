@@ -108,7 +108,7 @@ class BannerCrudController extends CrudController
 			'type' => 'image',
 			'upload' => true,
 			'crop' => true, 
-			'aspect_ratio' => '3.33', // omit or set to 0 to allow any aspect ratio
+			'aspect_ratio' => '2.33', // omit or set to 0 to allow any aspect ratio
 			'disk' => 'public',
 			'prefix' => 'uploads/' 
 			
