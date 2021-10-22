@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\VoluntarioRequest;
 use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\Voluntario;
@@ -9,8 +10,7 @@ use App\Models\ActividadVoluntario;
 use App\Models\Social;
 use App\Models\FotoVoluntario;
 use View;
-
-use Storage;
+use Illuminate\Support\Facades\Storage;
 use File;
 
 class VoluntarioController extends Controller
@@ -38,7 +38,7 @@ class VoluntarioController extends Controller
 		return View::make('pagina-web.voluntarios.voluntario')->with($data);
 	}
 	
-	public function store(Request $request)
+	public function store(VoluntarioRequest $request)
     {
 		$voluntario = new Voluntario;
 
