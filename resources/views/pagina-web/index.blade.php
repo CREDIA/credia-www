@@ -436,6 +436,15 @@
 								</div>
 							</div><!-- .row end -->
 							<textarea name="descripcion" id="descripcion" value="{{ old('descripcion') }}" placeholder="Ingrese su mensaje" cols="30" class="form-control" rows="10" required></textarea>
+							<div class="row">
+								<div class="col-lg-12">
+									<span class="captcha-image">{!! Captcha::img() !!}</span> &nbsp;&nbsp
+									<small style="color:white;">Ingrese los caracteres que se muestran en la imagen</small>
+									<input placeholder="Captcha" id="captcha" class="form-control" name="captcha" value="" type="text" required>
+									
+								</div>
+							</div>
+							
 							<button type="submit" class="btn btn-secondary btn-color-alt">aplica ya</button>
 						</form><!-- #volunteer-form .xs-volunteer-form END -->
 					</div>

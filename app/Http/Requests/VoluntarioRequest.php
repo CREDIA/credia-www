@@ -15,7 +15,7 @@ class VoluntarioRequest extends FormRequest
     public function authorize()
     {
         // only allow updates if the user is logged in
-        return \Auth::check();
+        return true;
     }
 
     /**
@@ -26,7 +26,14 @@ class VoluntarioRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+             'nombre' => 'required|min:5|max:255',
+             'correo' => 'required|email',
+             'descripcion' => 'required|min:10|max:255',
+             'file' => 'required|file',
+             'captcha' => 'captcha|required',
+             'actividad_voluntario_id' => 'exists:App\Models\ActividadVoluntario,id'
+             
+
         ];
     }
 

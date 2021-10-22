@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\VoluntarioRequest;
 use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\Voluntario;
@@ -39,7 +40,7 @@ class IndexController extends Controller
 		return View::make('pagina-web.index')->with($data);
 	}
 	
-	public function store(Request $request)
+	public function store(VoluntarioRequest $request)
     {
 		$voluntario = new Voluntario;
 
