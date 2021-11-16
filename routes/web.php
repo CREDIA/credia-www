@@ -58,7 +58,9 @@ Route::get('proyectos', 'ProyectoController@proyecto')->name('proyecto');
 Route::get('quienes-somos', 'FundacionController@quien_somos')->name('quienes_somos');
 Route::get('sistemas', 'SistemaController@sistema')->name('sistema');
 Route::get('voluntarios','VoluntarioController@voluntario')->name('voluntario');
-
+Route::get('senprende-dashboard', function() {
+	return view('pagina-web.powerbi');
+});
 Route::get('blog/categoria/{categoria}/{categoria_id}', 'BlogController@search_categoria_blog')->name('categoria_blog');
 Route::get('blog/{slug}/{id}', 'BlogController@blogdetalle')->name('blogdetalle');
 Route::get('eventos/{slug}/{id}', 'EventoController@eventodetalle')->name('eventodetalle');
