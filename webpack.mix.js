@@ -11,7 +11,7 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.react('resources/assets/js/app.js', 'public/js')
-   .react('resources/assets/smm/js/main.js','public/smms/js')
+mix.js('resources/assets/js/app.js', 'public/js').react()
+   .js('resources/assets/smm/js/main.js','public/smms/js').react()
    .copy('resources/assets/smm/js/components/wizard.css','public/smms/css')
    .sass('resources/assets/sass/app.scss', 'public/css');
