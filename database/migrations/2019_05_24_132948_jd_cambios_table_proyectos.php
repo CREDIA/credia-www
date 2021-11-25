@@ -9,7 +9,7 @@ class JdCambiosTableProyectos extends Migration
     public function up()
     {
         Schema::table('proyectos', function (Blueprint $table) {
-            $table->decimal('presupuesto', 8, 2)->nullable()->change();
+            $table->decimal('presupuesto', 10, 2)->nullable()->change();
         });
     }
 
