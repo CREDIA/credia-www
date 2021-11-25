@@ -20,8 +20,8 @@ class ProyectoController extends Controller
 		$contenido = $banner->first()->descripcion;
 		$redes = Social::all();
 		
-		$proyectos = Proyecto::where([['avance','<','100'],['estado','=','1']])->orderBy('fecha_convenio','asc')->get();
-		$ejecuciones = Proyecto::where([['avance','=','100'],['estado','=','1']])->orderBy('fecha_convenio','asc')->paginate(6);
+		$proyectos = Proyecto::where([['avance','<','100']])->orderBy('fecha_convenio','asc')->get();
+		$ejecuciones = Proyecto::where([['avance','=','100']])->orderBy('fecha_convenio','asc')->paginate(6);
 		
 		$data = array(
 			"foto" => $foto,
